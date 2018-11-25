@@ -17,7 +17,7 @@
 <body>
   <!-- header start -->
   <div id="app">
-    <div v-show="!carouselDisplayed">
+    <div v-if="!carouselDisplayed">
 
       <div class="container-fluid">
         <div class="row">
@@ -60,7 +60,7 @@
 
 
     <!-- carousel start -->
-    <div id="carouselBackground" v-show="carouselDisplayed">
+    <div id="carouselBackground" v-if="carouselDisplayed">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" v-for="(book, index) in books" v-if="index === 0">
